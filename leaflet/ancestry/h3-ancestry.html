@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>H3 Ancestry</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+
+
+
+</head>
+<body>
+
+
+	<div id="map-container" style="width: 100%; height: 100%; position: absolute;">
+		<div id="mapid" style="width: 100%; height: 100%; position: absolute; z-index: 0"></div>
+		<div class="switch-toggle switch-3 switch-candy" style="position: absolute; margin: 0 auto; top: 2%; right: 2%; width: 190px; z-index: 5; background-color: white;">
+	    <input id="GeohashToggle" name="state-d" type="radio" checked="">
+	    <label for="on" onclick="">Geohash</label>
+
+	    <input id="H3Toggle" name="state-d" type="radio">
+	        <label for="na" onclick="">H3</label>
+
+	    <input id="S2Toggle" name="state-d" type="radio">
+	    <label for="off" onclick="">S2</label>
+
+    <a></a>
+</div>
+	</div>
+	<script src="h3-ancestry-bundle.js"></script>
+
+</body>
+</html>
