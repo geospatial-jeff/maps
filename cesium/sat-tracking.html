@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://cesiumjs.org/releases/1.55/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesiumjs.org/releases/1.55/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+<style>
+  .btn-group button {
+    border: 1px solid black;
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+  }
+
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+
+  /* Clear floats (clearfix hack) */f
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }
+
+</style>
+<body>
+  <div id="cesiumContainer" style="width: 100%; height:100%; position:relative"></div>
+  <div id="button-container" style="top: 2%; left: 1%; position:absolute">
+    <div class="btn-group">
+      <button id="cbers" style="background-color:#EF3B2C;">CBERS</button>
+      <button id="cosmoskymed" style="background-color:#980043;">CosmoSkymed</button>
+      <button id="landsat" style="background-color:#41AB5D;">Landsat</button>
+      <button id="pleiades" style="background-color#FEC44F;">Pleiades</button>
+      <button id="rapideye" style="background-color:#8C510A;">RapidEye</button>
+      <button id="sentinel1" style="background-color:#DF65B0;">Sentinel1</button>
+      <button id="sentinel2" style="background-color:#6A51A3;">Sentinel2</button>
+      <button id="skysat" style="background-color:#4292C6;">SkySat</button>
+      <button id="terrasar" style="background-color:#737373;">TerraSAR</button>
+    </div>
+    <form style="background-color: white; width:140px;">
+      <input id="orbitcount" type="number" name="orbitcount" default=1 min=1 max=10 value=1>Orbit Count<br>
+      <input id="speed" type="number" name="speed" default=1 min=1 max=60 value=1>Speed<br>
+    </form>
+  </div>
+
+  <script src='sat-tracking.js'></script>
+</body>
+</html>
